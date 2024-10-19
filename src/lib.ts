@@ -27,8 +27,8 @@ export function easeOutElastic(x: number) {
     : Math.pow(6, -10 * x) * Math.sin((x * 10 - 0.75) * c4) + 1
 }
 
-export function easeInQuad(x: number) {
-  return x * x
+export function easeInOutQuad(x: number) {
+  return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
 }
 
 export function clamp(value: number, min: number, max: number) {

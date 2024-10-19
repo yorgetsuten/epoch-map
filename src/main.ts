@@ -1,5 +1,5 @@
 import { Application, Assets, Container, Graphics, Sprite, Text } from 'pixi.js'
-import { clamp, resize, easeOutElastic, easeInQuad } from './lib'
+import { clamp, resize, easeOutElastic, easeInOutQuad } from './lib'
 // import { Spine } from '@pixi/spine-pixi'
 import 'normalize.css'
 
@@ -55,8 +55,8 @@ const app = new Application()
     pivot: {
       x: mapDimensions.width / 2,
       y: mapDimensions.height / 2
-    }
-    // scale: 0
+    },
+    scale: 0
   })
 
   const mapIcon1 = new Sprite({
@@ -175,7 +175,7 @@ const app = new Application()
         const currentTime = Date.now()
         const progress = clamp((currentTime - startTime) / duration, 0, 1)
 
-        mapContainer.scale.set(easeInQuad(1 - progress))
+        mapContainer.scale.set(easeInOutQuad(1 - progress))
 
         if (progress === 1) app.ticker.remove(closeMap)
       }
