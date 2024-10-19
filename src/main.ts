@@ -192,7 +192,7 @@ const app = new Application()
 
   maskContainer.onwheel = (event) => {
     maskedContentContainer.x = clampNewX(
-      maskedContentContainer.x + event.deltaX
+      maskedContentContainer.x + event.deltaX + event.deltaY
     )
   }
 
