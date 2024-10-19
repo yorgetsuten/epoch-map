@@ -1,0 +1,20 @@
+{
+  "name": "pixiui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pixi/spine-pixi": "^2.1.1",
+    "normalize.css": "^8.0.1",
+    "pixi.js": "^8.5.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8"
+  }
+}
