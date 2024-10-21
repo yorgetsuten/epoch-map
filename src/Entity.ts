@@ -21,7 +21,6 @@ export class Entity {
 
   constructor({
     dimensions,
-    centerScaling,
     scale,
     cursor,
     eventMode
@@ -40,14 +39,12 @@ export class Entity {
       eventMode,
     })
 
-    // if (centerScaling) {
     this.container.x = this.dimensions.x + this.dimensions.width / 2
     this.container.y = this.dimensions.y + this.dimensions.height / 2
     this.container.pivot = {
       x: this.dimensions.width / 2,
       y: this.dimensions.height / 2
     }
-    // }
   }
 
   public addChild(...args: Container[]) {
